@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      color: white;
+      background-color: black;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    #page {
+      padding: 30px;
+    }
+
+    li {
+      list-style-type: none;
+      padding: 10px;
+      background-color: red;
+      color: white;
+      border: solid;
+      margin: 0;
+      border-width: 1px;
+      font-size: 25px;
+    }
+
+    #notes {
+      background-color: white;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      color: black;
+      text-align: center;
+      padding: 10px;
+      font-size: 30px;
+      margin-right: 60px;
+      margin-left: 90px;
+      border: solid;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="page">
+    <h1 id="header">List</h1>
+    <h2>Buy groceries</h2>
+    <ul>
+      <li id="one" class="hot"><em>fresh figs</em></li>
+      <li id="two" class="hot">pine nuts</li>
+      <li id="three" class="hot">honey</li>
+      <li id="four" >balsamic vinegar</li>
+    </ul>
+    <!-- <div id="notes"></div> -->
+  </div>
+
+  <script src="js/JQUERYdownload.js"></script>
+
+  <script>
+
+    $(function () {
+      $('li:lt(2)').removeClass('hot');
+      
+
+
+    });
+
+
+
+
+
+  </script>
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      color: white;
+      background-color: black;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    #page {
+      padding: 30px;
+    }
+
+    li {
+      list-style-type: none;
+      padding: 10px;
+      background-color: red;
+      color: white;
+      border: solid;
+      margin: 0;
+      border-width: 1px;
+      font-size: 25px;
+    }
+
+    #notes {
+      background-color: white;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      color: black;
+      text-align: center;
+      padding: 10px;
+      font-size: 30px;
+      margin-right: 60px;
+      margin-left: 90px;
+      border: solid;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="page">
+    <h1 id="header">List</h1>
+    <h2>Buy groceries</h2>
+    <ul>
+      <li id="one" class="hot"><em>fresh figs</em></li>
+      <li id="two" class="hot">pine nuts</li>
+      <li id="three" class="hot">honey</li>
+      <li id="four" >balsamic vinegar</li>
+    </ul>
+    <!-- <div id="notes"></div> -->
+  </div>
+
+  <script src="js/JQUERYdownload.js"></script>
+
+  <script>
+
+    $(function () {
+      var $listItems = $('li');
+      $listItems.filter('.hot:last').removeClass('hot');
+      $('li:not(.hot)').addClass('cool');
+      $listItems.has('em').addClass('complete');
+
+      $listItems.each(function(){
+        var $this = $(this);
+        if ($this.is('.hot')){
+          $this.prepend('Priority item: ');
+        }
+
+      });
+
+      $('li:contains("honey")').append(' (local)');
+
+
+
+
+    });
+
+
+
+
+
+  </script>
+</body>
+
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      color: white;
+      background-color: black;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    #page {
+      padding: 30px;
+    }
+
+    li {
+      list-style-type: none;
+      padding: 10px;
+      background-color: red;
+      color: white;
+      border: solid;
+      margin: 0;
+      border-width: 1px;
+      font-size: 30px;
+    }
+
+    #notes {
+      background-color: white;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      color: black;
+      text-align: center;
+      padding: 10px;
+      font-size: 30px;
+      margin-right: 60px;
+      margin-left: 90px;
+      border: solid;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="page">
+    <h1 id="header">List</h1>
+    <h2>Buy groceries</h2>
+    <ul>
+      <li id="one" class="hot">fresh figs</li>
+      <li id="two">pine nuts</li>
+      <li id="three"class="hot">honey</li>
+      <li id="four">balsamic vinegar</li>
+    </ul>
+    <div id="notes"></div>
+  </div>
+
+  <script src="js/JQUERYdownload.js"></script>
+
+  <script>
+
+    $(function () {
+      var listItem, itemStatus, eventType;
+
+      $('ul').on(
+        'click mouseover',
+        ':not(.hot)',
+        // ':not(#four)', dak ban tah four ng muy teh but ber jg dak 2-3... use class
+        { status: 'important' },
+        function (e) {
+          listItem = 'Item: ' + e.target.textContent + '<br/>';
+          itemStatus = 'Status: ' + e.data.status + '<br/>';
+          eventType = 'Event: ' + e.type;
+          $('#notes').html(listItem + itemStatus + eventType);
+        }
+
+      );
+
+
+
+    });
+
+
+
+
+
+  </script>
+</body>
+
+</html> -->

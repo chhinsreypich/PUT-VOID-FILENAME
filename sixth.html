@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      text-align: center;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+    }
+
+    .whole {
+      background-color: rgb(241, 236, 229);
+      padding: 20px;
+      padding-bottom: 20px;
+    }
+
+    .logo-div {
+      margin: 0;
+    }
+
+    .logo {
+      width: 54px;
+    }
+
+    .logo-text {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+    }
+
+    .text-button {
+      margin: 0;
+      background-color: rgb(68, 68, 249);
+      color: white;
+      border: solid;
+      border: none;
+      padding: 10px 17px;
+      border-radius: 9px;
+      font-weight: 600;
+
+
+    }
+
+    .selection {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .option-all {
+      align-items: center;
+      justify-content: center;
+      height: 25px;
+      width: 150px;
+      padding-bottom: 5px;
+      margin-left: 20px;
+    }
+
+    .input-check {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .style-check {
+      width: 30px;
+      height: 18px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <form action="" id="formSignup">
+    <div class="whole">
+      <div class="logo-div">
+        <img src="image/logo.png" alt="" class="logo">
+        <p class="logo-text">LISTKING</p>
+      </div>
+
+      <h2>MEMBERSHIP</h2>
+
+      <div class="selection">
+        <label>Select a Package: </label>
+        <select id="package" class="option-all">
+          <option value="monthly">monthly</option>
+          <option value="year">1 year ($50)</option>
+        </select>
+
+      </div>
+
+      <p id="packageHint" style="color: green; display: flex; justify-content: center;"></p>
+
+      <div class="input-check">
+        <input type="checkbox" id="terms">Check to agree to terms & conditions
+
+      </div>
+      <p id="termsHint"></p>
+      <button class="text-button">NEXT</button>
+
+    </div>
+  </form>
+
+
+
+
+  <script>
+    var elForm, elSelectPackage, elPackageHint, elTerm;
+
+    elForm = document.getElementById('formSignup');
+    elSelectPackage = document.getElementById('package');
+    elPackageHint = document.getElementById('packageHint');
+    elTerms = document.getElementById('terms');
+    elTermsHint = document.getElementById('termsHint');
+
+    function packageHint() {
+      var package = this.options[this.selectedIndex].value;
+      if (package == 'monthly') {
+        elPackageHint.innerHTML = 'Save $10 if you pay for 1 year !.';
+      } else {
+        elPackageHint.innerHTML = "<i class='material-icons' style=' font-size: 22px; color: rgb(54, 159, 91); padding-top: 5px'>check_circle</i> " + ' Wise choice!';
+      }
+
+    }
+
+    function checkTerms(event) {
+      if (!elTerms.checked) {
+        elTermsHint.innerHTML = "<i class='fa solid fa-exclamation-triangle' style='font-size:24px; color:red;'></i>" + ' You must agree to the terms.';
+        event.preventDefault();
+      }
+    }
+
+    elForm.addEventListener('submit', checkTerms, false);
+    elSelectPackage.addEventListener('change', packageHint, false);
+
+  </script>
+
+</body>
+
+</html>

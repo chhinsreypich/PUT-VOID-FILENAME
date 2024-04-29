@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2 JavaScript</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- this link is use for icon -->
+  <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+
+
+    }
+    body{
+      background-color: blanchedalmond;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 50px;
+    }
+
+    
+   
+    h1{
+      text-align: center;
+      font-size: 50px;
+      margin-bottom: 50px;
+      font-style: oblique;
+
+    }
+    #content{
+      width: 300px;
+      padding: 15px;
+      background-color: rgb(248, 245, 241);
+      border: 1px solid ;
+      font-size: 24px;
+      border-radius: 3px;
+
+
+    }
+    .messenge{
+      margin-bottom: 10px;
+      margin-top: 10px;
+
+    }
+    .check{
+      background-color: rgb(29, 235, 40);
+      color: white;
+      font-size: 18px;
+      padding: 5px;
+      border-radius: 20px;
+      padding-bottom: 4px;
+      margin-left: 20px;
+
+    }
+
+    .cross{
+      color: red;
+      /* background-color: black;
+      font-size: 18px;
+      padding: 8px;
+      border-radius: 30px;
+      padding-bottom: 4px;  */
+      margin-left: 20px; 
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>Elderflower</h1>
+
+  <div id="content">
+
+    <div class="messenge">
+      Available:
+      <span id="stock"  class="true" ><i class="fa fa-check  check" ></i></span><!-- tbong ot mean class = true teh but pel link 1 js hz var dak nv console oy , and ah nis yg dak klun eng-->
+    </div>
+
+    <div class="messenge" >
+      Shipping:
+      <span id="shipping" class="false" ><i class="fa fa-times  cross" ></i></span> <!---->
+    </div>
+
+
+    <p id="color" style="margin-bottom: 10px;">Color: </p>
+    <p id="number">number: </p>
+    <p id="average">Averge </p>
+
+
+  </div>
+  
+
+  <!-- <i class="fa fa-car"></i>
+  <i class="fa fa-car" style="font-size:48px;"></i>
+  <i class="fa fa-car" style="font-size:60px;color:red;"></i>
+
+  <ul class="fa-ul">
+    <li><i class="fa-li fa fa-check-square"></i>List icons</li>
+    <li><i class="fa-li fa fa-spinner fa-spin"></i>List icons</li>
+    <li><i class="fa-li fa fa-square"></i>List icons</li>
+  </ul>
+
+  <i class="fa fa-spinner fa-spin"></i>
+  <i class="fa fa-circle-o-notch fa-spin"></i>
+  <i class="fa fa-refresh fa-spin"></i>
+  <i class="fa fa-cog fa-spin"></i>
+  <i class="fa fa-spinner fa-pulse"></i>
+
+  <i class="fa fa-shield"></i>
+  <i class="fa fa-shield fa-rotate-90"></i>
+  <i class="fa fa-shield fa-rotate-180"></i>
+  <i class="fa fa-shield fa-rotate-270"></i>
+  <i class="fa fa-shield fa-flip-horizontal"></i>
+  <i class="fa fa-shield fa-flip-vertical"></i> -->
+
+  <script src="js/secondJS.js"></script>
+  
+</body>
+</html>

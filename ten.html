@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <!-- page  244 170 294 lesson -->
+
+
+  <p id="review">Review</p>
+
+  <h2 id="title"></h2>
+  <p id="message"></p>
+  <p id="hotel"></p>
+
+  <script>
+    /*
+    let number = 20.0;
+    // const number = 20; cannot declare number again even if it is diff data type
+    console.log(number);
+
+    var el = document.getElementById('review');
+    el.textContent = number;
+
+    //alert(number);
+
+    document.write(20);
+    //// alert hz add jol document bos yg
+    //// but ke ot sov brer
+   */
+
+
+    /*
+        var title;
+        var message;
+        title = "Special Offer";
+        message = '<a href="image/pic.jpg">25% off</a>';
+    
+        var elTitle = document.getElementById('title');
+        elTitle.innerHTML = title;
+    
+        ///// cuz message var have <a> tag so we use innerhtml
+        //// if we use text content it will show us the <a>... in the html ng mg ( it think message with <a> is normal text)
+        var elMsg = document.getElementById('message');
+        elMsg.innerHTML = message
+    */
+
+
+    /*
+        var colors = ['red', 'blue', 'yellow', 'green'];
+        console.log(colors[2]);
+        var colors2 = colors.push("orange");
+        colors[2] = "brown";
+    
+        for (let i = 0; i < colors.length; i++){
+          console.log (colors[i]);
+        }
+    */
+
+
+    /*
+    function myArea(){
+          var width = 30;
+          var height = 30
+          return width * height;
+    
+        }
+    
+        console.log(myArea());
+    
+        function myArea2(width, height){
+          var title; 
+          //// if declare with var we can use anywhere, can outside function also
+          return width * height;
+        }
+        title = 20;
+      
+    
+        console.log(myArea2(30, 40));
+        console.log("my area 2 is: " + myArea2(30, 40));
+        */
+
+/*
+var hotel = {
+  /// properties 
+  name: "Sokha",
+  room: 70,
+  bookedRoom: 40,
+  pool: true,
+  gym: true,
+  // method
+  availableRoom (){
+    return this.room - this.bookedRoom;
+  },
+
+};
+
+console.log(hotel.name);
+hotel.name = "Park";
+console.log(hotel.name);
+console.log(hotel.gym);
+console.log("Hotel " + hotel.availableRoom());
+
+
+*/
+
+/*
+function Hotel(name, room, booked){
+  this.room = room;
+  this.name = name;
+  this.booked = booked;
+
+  availableRoom = function(){
+    return room - booked;
+  }
+}
+
+var hotel1 = new Hotel("Sokha", 70, 40);
+var hotel2 = new Hotel("Park", 90, 40);
+
+
+console.log(hotel1);
+var elHotel = document.getElementById('hotel');
+elHotel.textContent = hotel1.name;
+*/
+
+
+
+/*
+
+var cost = {
+  room1: [420, 40, 20],
+  room2: [460, 42, 20],
+  room3: [230, 0, 25],
+  room4: [380, 54, 30],
+};
+
+console.log(cost.room2[2]);
+                     
+*/
+
+var text = "home sweet home";
+console.log(text.length);
+console.log(text.toUpperCase());
+console.log(text.toLowerCase());
+console.log(text.charAt());
+console.log(text.indexOf());
+console.log(text.split(" "));
+console.log(text.replace("h", "w "));
+console.log(Math.round(4.54));
+console.log(Math.sqrt(4));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>

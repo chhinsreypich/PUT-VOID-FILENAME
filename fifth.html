@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: black;
+      color: white;
+
+
+    }
+
+    p {
+      color: white;
+    }
+
+    .head {
+      margin-top: 50px;
+      margin-bottom: 20px;
+      color: white;
+      font-size: 60px;
+
+
+    }
+
+    #message {
+      /* color: white; */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="head">My Profile</div>
+  <textarea name="" id="message" cols="40" rows="10" class="big-input"></textarea>
+
+  <p id="characterLeft"></p>
+  <p id="lastkey"></p>
+
+
+
+  <script>
+    var el;
+    
+
+    function charCount(e) {
+      var textEntered, charDisplay, counter, lastKey;
+      textEntered = document.getElementById('message').value;
+      charDisplay = document.getElementById('characterLeft');
+      counter = (10 - (textEntered.length));
+      charDisplay.textContent = counter;
+      
+      if (counter < 0) {
+        document.getElementById('characterLeft').innerHTML = 'more than 10 characters.';
+        characterLeft.style.color = "red";
+        characterLeft.style.fontSize = "25px";
+      } else {
+        characterLeft.style.color = "white";
+      }
+      lastkey = document.getElementById('lastkey');
+      lastkey.textContent = 'Last key in ASCII code: ' + e.keyCode;
+
+    }
+
+    el = document.getElementById('message');
+    el.addEventListener('keypress', charCount, false);
+
+
+
+  </script>
+
+
+
+</body>
+
+</html>

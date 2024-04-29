@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="page">
+    <h1 id="header">List</h1>
+    <h2>Buy groceries</h2>
+    <ul>
+      <li id="one" class="hot">Orange</li>
+      <li id="two" class="hot">Grape</li>
+      <li id="three" class="hot">Mango</li>
+      <li id="four">Coconut</li>
+    </ul>
+    <img src="image/pic.jpg" style="width: 150px;">
+  </div>
+
+
+  <script src="js/JQUERYdownload.js"></script>
+
+  <script>
+
+    $(function () {
+      $("li.hot").removeClass();
+      $("li.hot").addClass("favorite");
+      $("li").css({"color" : "red", " background-color": "black", "font-size": "30px"});
+    
+      
+
+
+      var $listHTML = $("ul").html();
+      $("ul").append ( $listHTML);
+      //// append but add at the end of list
+
+      let $listText = $("ul").text();
+      $("ul").append ( "<p>" + $listText + "</p");
+
+
+      
+
+    });
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>

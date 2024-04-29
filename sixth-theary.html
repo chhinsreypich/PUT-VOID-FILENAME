@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://fonts.google.com/share?selection.family=Roboto+Slab:wght@100..900">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      text-align: center;
+      margin: 0;
+      font-family: Tahoma;
+      color: white;
+
+
+
+    }
+
+    .all {
+      background-color: rgb(238, 203, 153);
+      margin-left: 20%;
+      margin-top: 10%;
+      margin-right: 20%;
+      padding: 40px;
+
+    }
+
+    .logo-div {
+      margin: 0;
+    }
+
+    .logo {
+      width: 60px;
+    }
+
+    .logo-text {
+      margin: 0;
+      font-family: sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .text-button {
+      margin: 0;
+      background-color: rgb(255, 166, 0);
+      box-shadow: grey 3px 3px 3px;
+      color: white;
+      border: solid;
+      border: none;
+      padding: 10px 17px;
+      border-radius: 90px;
+      font-weight: 600;
+
+
+    }
+
+    .selection {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .mon-year {
+      align-items: center;
+      justify-content: center;
+      height: 25px;
+      width: 150px;
+      padding-bottom: 5px;
+      margin-left: 20px;
+    }
+
+    .input-check {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  </style>
+</head>
+
+<body>
+  <form action="" id="formSignup">
+    <div class="all">
+      <div class="logo-div">
+        <img src="image/fresh-green-leaf-vegetable-logo-vector-removebg-preview.png" alt="" class="logo">
+        <p class="logo-text">Fresh Inc.</p>
+      </div>
+
+      <h2>MEMBERSHIP</h2>
+
+      <div class="selection">
+        <label>Select a Package: </label>
+        <select id="package" class="mon-year">
+          <option value="monthly">monthly (5$)</option>
+          <option value="year">1 year ($50)</option>
+        </select>
+
+      </div>
+
+      <p id="packageHint" style="color: green; display: flex; justify-content: center;"></p>
+
+      <div class="input-check">
+        <input type="checkbox" id="terms">Check to agree to terms & conditions
+
+      </div>
+      <p id="termsHint"></p>
+      <button class="text-button">NEXT</button>
+
+    </div>
+  </form>
+
+
+
+
+  <script>
+    var elForm, elSelectPackage, elPackageHint, elTerm;
+
+    elForm = document.getElementById('formSignup');
+    elSelectPackage = document.getElementById('package');
+    elPackageHint = document.getElementById('packageHint');
+    elTerms = document.getElementById('terms');
+    elTermsHint = document.getElementById('termsHint');
+
+    function packageHint() {
+      var package = this.options[this.selectedIndex].value;
+      if (package == 'monthly') {
+        elPackageHint.innerHTML = 'Save $10 if you pay for 1 year !.';
+      } else {
+        elPackageHint.innerHTML = "<i class='material-icons' style=' font-size: 22px; color: rgb(54, 159, 91); padding-top: 5px'>check_circle</i> " + ' Wise choice!';
+      }
+
+    }
+
+    function checkTerms(event) {
+      if (!elTerms.checked) {
+        elTermsHint.innerHTML = "<i class='fa solid fa-exclamation-triangle' style='font-size:24px; color:red;'></i>" + ' You must agree to the terms.';
+        event.preventDefault();
+      }
+    }
+
+    elForm.addEventListener('submit', checkTerms, false);
+    elSelectPackage.addEventListener('change', packageHint, false);
+
+  </script>
+
+</body>
+
+</html>

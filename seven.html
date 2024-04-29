@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="page">
+    <h1 id="header">List</h1>
+    <h2>Buy groceries</h2>
+    <ul>
+      <li id="one" class="hot">fresh</li>
+      <li id="two" class="hot">pine nuts</li>
+      <li id="three" class="hot">honey</li>
+      <li id="four">balsamic vinegar</li>
+    </ul>
+    <img src="image/pic.jpg" alt="">
+  </div>
+
+
+  <script src="js/JQUERYdownload.js"></script>
+
+  <script>
+    // //// 1 
+    // $(document).ready(function (){
+    //   /// coding 
+
+    // });
+
+    // //// 2
+    // /// pi ng brer ah na kr ban
+    $(function () {
+
+      // document.getelementbyname("li");  ///same as 3
+      $('li').on('click', function () {   ///// 3
+        $(this).remove();
+
+      });
+      //// if we use hide at remove =>> if will hide when click . but it still show in console
+
+      $("h1").click(function () {
+        $(this).hide().fadeIn(5000);
+        //// fadein 5s after is show us back
+      });
+
+      $("img").click(function () {
+        $(this).hide().fadeIn(5000);
+        //// fadein 5s after is show us back
+      });
+
+      // $('li:lt(3)').hide().fadeIn(1500); // 
+
+      $('li#four').addClass('second');
+      $('li[id != "one"]').hide().delay(500).fadeIn(2000);
+      $(':header').addClass('headline'); 
+      
+
+    });
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>

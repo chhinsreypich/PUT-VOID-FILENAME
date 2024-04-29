@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul>
+    <li>Orange</li>
+    <li>Mangoes</li>
+    <!-- example we want to add cream in script -->
+    <!-- <li>Cream</li> -->
+
+
+  </ul>
+
+  <ul>
+
+
+  </ul>
+  <!-- //// method post means we can dak data yg tv db -->
+  <form action="#" method="post">
+    <label for="">User name</label>
+    <input id="username" type="text">
+    <p id="feedback" style="color: red;"></p>
+    <label for="">Password</label>
+    <input type="password">
+    <button>Submit</button>
+  </form>
+
+
+
+  <script>
+
+    // function checkUser() {
+
+    //   var feed = document.getElementById("feedback");
+    //   if (this.value.length < 5) { /// value is what we input in input
+    //     feed.textContent = "You must have at least 5 characters."
+    //   } else {
+    //     feed.textContent = "";
+    //   }
+    // }
+    // var elUser = document.getElementById('username');
+    // /// add evenlistener("event", function name, "Boolean")
+    // elUser.addEventListener("blur", checkUser, false);
+
+////// same but this we call with parameter but condition in if use username instead of this
+    function checkUser(minlenght) {
+
+      var feed = document.getElementById("feedback");
+      if (this.value.length < minlenght) { /// value is what we input in input
+        feed.textContent = "You must have at least " + minlenght +" characters."
+      } else {
+        feed.textContent = "";
+      }
+    }
+    var elUser = document.getElementById('username');
+    /// add evenlistener("event", function name, "Boolean")
+    elUser.addEventListener("blur", checkUser(5), false);
+
+
+    // after design => when we click, it shows us new list
+    // this is how we create
+    // first connect txt with li
+    // then connect list to ul
+
+    var list = document.getElementsByTagName('ul')[0];
+    var elTag = document.createElement('li');
+    var txtNode = document.createTextNode('Cream');
+    elTag.appendChild(txtNode);
+    list.appendChild(elTag); /// dak pi kroy
+    // list.insertBefore(elTag, list.firstChild);/// dak pi ler
+
+
+    // dak loop and class name ng oy all list mean class name = cool
+    var listItem = document.getElementsByTagName('li');
+    for (let i = 0; i < listItem.length; ++i) {
+      listItem[i].className = 'cool';
+    }
+
+    listItem[2].className = 'hot';
+
+
+
+  </script>
+
+</body>
+
+</html>

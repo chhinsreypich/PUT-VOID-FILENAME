@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home work 3</title>
+  <style>
+  
+    p{
+      margin-bottom: 5px;
+    }
+    input{
+      padding: 10px ;
+      width: 85%;
+      border: 2px solid;
+      border-radius: 5px;
+      border-color: rgb(178, 175, 175);
+      align-items: center;
+      text-align: center;
+    }
+
+    .all{
+      width : 60%;
+      border: solid;
+      border-color: rgb(160, 158, 158);
+      border-radius: 8px;
+      max-width: 500px;
+    }
+    .top{
+      background-color: rgb(20, 193, 178);
+      color: white;
+      margin: 0;
+      padding:  12px;
+      text-align: center;
+      border-radius: 5px 5px 0 0;
+    }
+    .bottom{
+      padding-left: 20px;
+    }
+    .button {
+      border: none;
+      background-color: rgb(41, 178, 178);
+      color: white;
+      margin-top: 12px;
+      padding: 8px 8px;
+      border-radius: 4px;
+      transition: opacity 0.20s;
+      cursor: pointer;
+    }
+    .button:hover {
+      opacity: 0.7;
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <div class="all">
+    <div class="top">
+      <h1 style="margin: 0;">
+        Register
+      </h1>
+    </div>
+
+
+    <div class="bottom">
+      <p>Username</p>
+      <input type="text" name="name" >
+
+      <p>Email</p>
+      <input type="email" name="email" >
+
+      <p>Password</p>
+      <input type="password" name="passoword" >
+
+      <p>Comfirm Passoword</p>
+      <input type="password" name="comfirm-password" >
+
+      <button class="button">Register</button>
+
+      <p>Already a member?<a href="">Sign in</a></p>
+
+    </div>
+  </div>
+  
+</body>
+</html>

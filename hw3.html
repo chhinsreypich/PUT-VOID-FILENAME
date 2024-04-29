@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Work 3</title>
+  <style>
+    h2 {
+      margin: 0;
+    }
+
+    p {
+      margin-bottom: 5px;
+    }
+
+    input {
+      border: solid;
+      border-width: 2px;
+      border-color: rgb(182, 180, 180);
+      border-radius: 4px;
+      padding: 10px 10px;
+      width: 85%;
+    }
+
+    .whole-div {
+      border: solid;
+      border-width: 1px;
+      border-radius: 7px;
+      border-color: rgb(155, 155, 155);
+      width: 50%;
+      margin: 25%;
+      max-width: 550px;
+    }
+
+    .first-div {
+      background-color: rgb(41, 178, 178);
+      color: white;
+      text-align: center;
+      padding: 17px;
+      border-radius: 5px 5px 0 0;
+
+    }
+
+    .second-div {
+      padding-left: 28px;
+    }
+
+    .register-button {
+      border: none;
+      background-color: rgb(41, 178, 178);
+      color: white;
+      margin-top: 12px;
+      margin-bottom: 10px;
+      padding: 8px 8px;
+      border-radius: 4px;
+      transition: background-color  0.30s;
+      cursor: pointer;
+    }
+    .register-button:hover {
+      background-color: rgb(60, 203, 203);
+      
+    }
+    .register-button:active {
+      background-color: rgb(40, 104, 104);
+    
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="whole-div">
+
+    <div class="first-div">
+      <h2 class="register">Register</h2>
+    </div>
+
+    <div class="second-div">
+      <p>
+        Username
+      </p>
+      <input type="text" name="name">
+
+      <p>
+        Email
+      </p>
+      <input type="email" name="email">
+
+      <p>
+        Password
+      </p>
+      <input type="password" name="password">
+
+      <p>
+        Comfirm Password
+      </p>
+      <input type="password" name="comfirm-password">
+
+      <button class="register-button">
+        Register
+      </button>
+
+      <p style="margin-top: 10px;
+                margin-bottom : 0.5px;">
+        Already a member?
+        <a href="" style="color: blue;">
+          Sign in
+        </a>
+      </p>
+
+    </div>
+  </div>
+
+</body>
+
+</html>

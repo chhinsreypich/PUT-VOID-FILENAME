@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    HTML First Code
+  </title>
+</head>
+
+<body>
+  <h1>
+    There so many thing u need to know about this!
+  </h1>
+  <h2>
+    There so many thing u need to know about this!
+  </h2>
+  <h3>
+    There so many thing u need to know about this!
+  </h3>
+  <h4>
+    There so many thing u need to know about this!
+  </h4>
+  <h5>
+    There so many thing u need to know about this!
+  </h5>
+  <h6>
+    There so many thing u need to know about this!
+  </h6>
+  <b>b tag in html . here i am</b> <br>
+  <i>what is i in this tag use in html ? and here i am</i>
+  <p>
+    Stallman wanted the FSFs products to fi t smoothly into the prevailing programming
+    cliture, so he decided that the new operating system sholid be compatible with Unix
+    in the sense that it sholid look just like Unix and sholid be able to run Unix programs.
+    In the tradition of the programming community in which he worked, Stallman chose a
+    whimsical name for the as-yet unbuilt operating system. He called it GNU
+  <h3>
+    hr tag in html mean horizential line. like below
+  </h3>
+  <hr>
+
+  <!-- This is comment in html -->
+
+  i need to know about this before enter to class
+  jahahhaha just kidding go to study before examomg my english look like shitwhat is that thing please tell me about
+  this
+  what wrong with my english
+  ahhh ignore those thing
+  go to study pich pich
+  </p>
+  <img src="image/pic.jpg" width="300px" height="500px">
+  <img src="image/pic.jpg" width="80%">
+  <!-- 
+    List 
+    order list <ol></ol>
+    under list <ul></ul>
+    list       <li></li> /// mean lek
+  
+  -->
+  <ol>
+    <li>C++</li>
+    <li>HTML</li>
+    <li>DS</li>
+    <li>DB</li>
+  </ol>
+
+  <ul>
+    <li>C++</li>
+    <li>HTMl</li>
+    <li>DS</li>
+    <li>DB</li>
+  </ul>
+
+</body>
+
+</html>
